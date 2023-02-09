@@ -13,6 +13,8 @@
 		31B20A7D29946149000DB1E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31B20A7C29946149000DB1E7 /* Assets.xcassets */; };
 		31B20A8029946149000DB1E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31B20A7E29946149000DB1E7 /* LaunchScreen.storyboard */; };
 		31B20A89299597FB000DB1E7 /* HabitsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20A88299597FB000DB1E7 /* HabitsStore.swift */; };
+		31B20A8B29959B0A000DB1E7 /* HabitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20A8A29959B0A000DB1E7 /* HabitsViewController.swift */; };
+		31B20A9129959BE1000DB1E7 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20A9029959BE1000DB1E7 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		31B20A7F29946149000DB1E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31B20A8129946149000DB1E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31B20A88299597FB000DB1E7 /* HabitsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsStore.swift; sourceTree = "<group>"; };
+		31B20A8A29959B0A000DB1E7 /* HabitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsViewController.swift; sourceTree = "<group>"; };
+		31B20A9029959BE1000DB1E7 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				31B20A7529946148000DB1E7 /* SceneDelegate.swift */,
 				31B20A87299597DB000DB1E7 /* Data */,
 				31B20A7729946148000DB1E7 /* ViewController.swift */,
+				31B20A8C29959B1B000DB1E7 /* Habits */,
+				31B20A8F29959B9A000DB1E7 /* Info */,
 				31B20A7C29946149000DB1E7 /* Assets.xcassets */,
 				31B20A7E29946149000DB1E7 /* LaunchScreen.storyboard */,
 				31B20A8129946149000DB1E7 /* Info.plist */,
@@ -73,6 +79,22 @@
 				31B20A88299597FB000DB1E7 /* HabitsStore.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		31B20A8C29959B1B000DB1E7 /* Habits */ = {
+			isa = PBXGroup;
+			children = (
+				31B20A8A29959B0A000DB1E7 /* HabitsViewController.swift */,
+			);
+			path = Habits;
+			sourceTree = "<group>";
+		};
+		31B20A8F29959B9A000DB1E7 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				31B20A9029959BE1000DB1E7 /* InfoViewController.swift */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +170,8 @@
 				31B20A89299597FB000DB1E7 /* HabitsStore.swift in Sources */,
 				31B20A7829946148000DB1E7 /* ViewController.swift in Sources */,
 				31B20A7429946148000DB1E7 /* AppDelegate.swift in Sources */,
+				31B20A8B29959B0A000DB1E7 /* HabitsViewController.swift in Sources */,
+				31B20A9129959BE1000DB1E7 /* InfoViewController.swift in Sources */,
 				31B20A7629946148000DB1E7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
