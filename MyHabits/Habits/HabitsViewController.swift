@@ -9,6 +9,8 @@ import UIKit
 
 class HabitsViewController: UIViewController {
 
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +29,18 @@ class HabitsViewController: UIViewController {
             image: UIImage(named: "habits_tab_icon"),
             tag: 0
         )
+        
+        let barButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addHabit))
+        navigationItem.rightBarButtonItem = barButton
     }
 
+    @objc func addHabit() {
+        let addHabitViewController = HabitViewController()
+
+        addHabitViewController.modalTransitionStyle = .crossDissolve
+        addHabitViewController.modalPresentationStyle = .currentContext
+
+        navigationController?.pushViewController(addHabitViewController, animated: true)
+        
+    }
 }
