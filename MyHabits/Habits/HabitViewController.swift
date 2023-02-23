@@ -16,19 +16,13 @@ private enum Constants : Int {
     case colorDiametr = 30
 }
 
-private struct NewHabit {
-    var habitName: String
-    var habitColor: UIColor
-    var habitDate: Date
-}
-
-private var newHabit = NewHabit(
-    habitName: "",
-    habitColor: UIColor(named: "Orange Color") ?? .systemBackground,
-    habitDate: Date ()
+private var newHabit = Habit(
+    name: "",
+    date: Date (),
+    color: UIColor(named: "Orange Color") ?? .systemBackground
 )
 
-class HabitViewController: UIViewController {
+class HabitViewController: UIViewController, UIColorPickerViewControllerDelegate {
 
     // MARK: - Subviews
     
@@ -43,7 +37,7 @@ class HabitViewController: UIViewController {
     
     private lazy var nameTextField: UITextField = {
         let field = UITextField()
-        field.text = newHabit.habitName
+        field.text = newHabit.name
         field.placeholder = "Бегать по утрам, спать 8 часов и т.п."
         field.font = UIFont.systemFont(ofSize: 17, weight: .regular)
         field.textColor = UIColor(named: "Blue Color")
@@ -60,9 +54,9 @@ class HabitViewController: UIViewController {
         return label
     }()
     
-    private lazy var colorView: UIView = {
+     lazy var colorView: UIView = {
         let view = UIView ()
-        view.backgroundColor = newHabit.habitColor
+        view.backgroundColor = newHabit.color
         view.layer.cornerRadius = CGFloat (Constants.colorDiametr.rawValue) / 2
         view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -90,7 +84,7 @@ class HabitViewController: UIViewController {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .time
         datePicker.tintColor = UIColor(named: "Purple Color")
-        datePicker.date = newHabit.habitDate
+        datePicker.date = newHabit.date
         datePicker.translatesAutoresizingMaskIntoConstraints = false
         return datePicker
     }()
@@ -105,9 +99,21 @@ class HabitViewController: UIViewController {
         setupConstraints()
         
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+    }
+    
     // MARK: - Actions
     
     @objc func didTapColor(_ sender: UIView) {
+        
+        let picker = UIColorPickerViewController()
+        picker.selectedColor = colorView.backgroundColor!
+        picker.supportsAlpha = true
+        
+        self.present(picker, animated: true, completion: nil)
+        picker.delegate = self
         
     }
     
@@ -119,18 +125,21 @@ class HabitViewController: UIViewController {
         
         let store = HabitsStore.shared
         store.habits.append(newHabit)
+        
+        
+        navigationController?.dismiss(animated: true)
     }
    
     @objc func cancelAddingHabit() {
-
+        navigationController?.dismiss(animated: true)
     }
     
     @objc func nameHabitChanged(_ sender: UITextField) {
-        newHabit.habitName = nameTextField.text ?? ""
+        newHabit.name = nameTextField.text ?? ""
     }
     
     @objc func dateHabitChanged(_ sender: UIDatePicker) {
-        newHabit.habitDate = timeSelect.date
+        newHabit.date = timeSelect.date
     }
     
     // MARK: - Private
@@ -254,4 +263,19 @@ class HabitViewController: UIViewController {
         
     }
     
+}
+
+// MARK: - Extensions
+
+extension HabitsViewController: UIColorPickerViewControllerDelegate {
+    //  Called once you have finished picking the color.
+       func colorPickerViewControllerDidFinish(_ viewController: UIColorPickerViewController) {
+           newHabit.color = viewController.selectedColor
+           
+       }
+       
+       //  Called on every color selection done in the picker.
+       func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
+           newHabit.color = viewController.selectedColor
+       }
 }

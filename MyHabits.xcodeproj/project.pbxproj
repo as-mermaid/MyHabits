@@ -17,7 +17,6 @@
 		31B20A9129959BE1000DB1E7 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20A9029959BE1000DB1E7 /* InfoViewController.swift */; };
 		31B20A9329983310000DB1E7 /* InfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20A9229983310000DB1E7 /* InfoText.swift */; };
 		31B20A952998C612000DB1E7 /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20A942998C612000DB1E7 /* HabitViewController.swift */; };
-		31B20A972998EB19000DB1E7 /* UIColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B20A962998EB19000DB1E7 /* UIColorPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		31B20A9029959BE1000DB1E7 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		31B20A9229983310000DB1E7 /* InfoText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoText.swift; sourceTree = "<group>"; };
 		31B20A942998C612000DB1E7 /* HabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
-		31B20A962998EB19000DB1E7 /* UIColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +90,6 @@
 			children = (
 				31B20A8A29959B0A000DB1E7 /* HabitsViewController.swift */,
 				31B20A942998C612000DB1E7 /* HabitViewController.swift */,
-				31B20A962998EB19000DB1E7 /* UIColorPickerViewController.swift */,
 			);
 			path = Habits;
 			sourceTree = "<group>";
@@ -181,7 +178,6 @@
 				31B20A7429946148000DB1E7 /* AppDelegate.swift in Sources */,
 				31B20A952998C612000DB1E7 /* HabitViewController.swift in Sources */,
 				31B20A9329983310000DB1E7 /* InfoText.swift in Sources */,
-				31B20A972998EB19000DB1E7 /* UIColorPickerViewController.swift in Sources */,
 				31B20A8B29959B0A000DB1E7 /* HabitsViewController.swift in Sources */,
 				31B20A9129959BE1000DB1E7 /* InfoViewController.swift in Sources */,
 				31B20A7629946148000DB1E7 /* SceneDelegate.swift in Sources */,
